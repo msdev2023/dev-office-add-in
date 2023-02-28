@@ -1,13 +1,6 @@
 name: Update Token
 
 on:
-  release:
-    types: [published]
-  push:
-    tags:
-    - 'v*'
-  #  branches:
-  #    - master
   schedule:
     - cron: '10 15 * * 1,3,5'
   watch:
