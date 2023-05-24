@@ -1,1 +1,2 @@
 - [warp.sh](https://github.com/P3TERX/warp.sh)
+- [wireguard-install.sh](https://github.com/angristan/wireguard-install)
