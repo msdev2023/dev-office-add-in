@@ -4,3 +4,8 @@
 - [install.ubuntu.18.04.sh](https://github.com/haoel/haoel.github.io/blob/master/scripts/install.ubuntu.18.04.sh)
 - [warp.sh](https://github.com/P3TERX/warp.sh)
 - [wireguard-install.sh](https://github.com/angristan/wireguard-install)
+
+
+## 抢购秒杀
+
+- [大麦网自动购票](https://github.com/ClassmateLin/dm-ticket)
