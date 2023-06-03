@@ -1,4 +1,4 @@
-﻿/**
+/**
   * Gets the stock price at the end of month.
   * @customfunction
   * @param {string} symbol Xueqiu stock symbol
