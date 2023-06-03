@@ -2,7 +2,6 @@ from datetime import datetime, timezone, timedelta
 
 import aiohttp
 import asyncio
-from django.core.management import BaseCommand
 
 CST = timezone(timedelta(hours=8))
 
@@ -143,11 +142,6 @@ async def runner():
 def main():
     loop = asyncio.get_event_loop()
     loop.run_until_complete(runner())
-
-
-class Command(BaseCommand):
-    def handle(self, *args, **options):
-        main()
 
 
 if __name__ == "__main__":
