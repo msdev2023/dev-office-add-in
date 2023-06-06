@@ -6,6 +6,11 @@
 - [wireguard-install.sh](https://github.com/angristan/wireguard-install)
 
 
+## Swiss Army Knife
+
+- [Setup multiple git identities & git user informations](https://gist.github.com/bgauduch/06a8c4ec2fec8fef6354afe94358c89e)
+
+
 ## 抢购秒杀
 
 - [大麦网自动购票](https://github.com/ClassmateLin/dm-ticket)
