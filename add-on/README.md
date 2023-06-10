@@ -14,6 +14,11 @@
 - [Using ffmpeg to extract audio from video files](https://gist.github.com/00001101-xt/ce4901ac2364ff017faaac47b1515a54)
 
 
+## Miscellaneous
+
+- [Stevey's Google Platforms Rant](https://gist.github.com/chitchcock/1281611)
+
+
 ## 抢购秒杀
 
 - [大麦网自动购票](https://github.com/ClassmateLin/dm-ticket)
