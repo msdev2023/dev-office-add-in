@@ -17,6 +17,7 @@
 ## Miscellaneous
 
 - [Stevey's Google Platforms Rant](https://gist.github.com/chitchcock/1281611)
+- [常用超大字符集字体](https://gist.github.com/dzcpy/dec6ca5c81e1700ff42864f63ea55230)
 
 
 ## 抢购秒杀
