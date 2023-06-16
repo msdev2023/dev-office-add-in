@@ -14,6 +14,10 @@
 - [Using ffmpeg to extract audio from video files](https://gist.github.com/00001101-xt/ce4901ac2364ff017faaac47b1515a54)
 
 
+- [Hardening Ubuntu with CIS benchmarks and ComplianceAsCode](https://gist.github.com/craig-m-unsw/3c0d284108496c6c5d35ddaf1ba4c284)
+- [ansible-cis-open-source](https://gist.github.com/kgriffs/a3937936122281e59bf24b3cf2e86071)
+
+
 ## Miscellaneous
 
 - [Stevey's Google Platforms Rant](https://gist.github.com/chitchcock/1281611)
