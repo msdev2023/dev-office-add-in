@@ -25,3 +25,11 @@ jobs:
         CLIENT_SECRET_1: ${{ secrets.CLIENT_SECRET }}
       run: |
         python UpdateToken.py
+    - name: update_or_create Update.Token.txt
+      run: date +"%Y-%m-%d %H:%M:%S %z" > Update.Token.txt
+    - name: commit report
+      run: |
+        git config --global user.name 'msdev2023'
+        git config --global user.email 'msdev2023@outlook.com'
+        git commit -am "Report: Update.Token"
+        git push
