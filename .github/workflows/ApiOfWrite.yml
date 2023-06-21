@@ -27,3 +27,11 @@ jobs:
         CLIENT_SECRET_1: ${{ secrets.CLIENT_SECRET }}
       run: |
         python ApiOfWrite.py
+    - name: update_or_create Api.Write.txt
+      run: date +"%Y-%m-%d %H:%M:%S %z" > Api.Write.txt
+    - name: commit report
+      run: |
+        git config --global user.name 'msdev2023'
+        git config --global user.email 'msdev2023@outlook.com'
+        git commit -am "Report: Api.Write"
+        git push
