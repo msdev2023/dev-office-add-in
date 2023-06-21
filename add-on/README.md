@@ -31,6 +31,8 @@
 - [Hardening Ubuntu with CIS benchmarks and ComplianceAsCode](https://gist.github.com/craig-m-unsw/3c0d284108496c6c5d35ddaf1ba4c284)
 - [ansible-cis-open-source](https://gist.github.com/kgriffs/a3937936122281e59bf24b3cf2e86071)
 
+- [IDAPython Cheatsheet](https://gist.github.com/icecr4ck/7a7af3277787c794c66965517199fc9c)
+
 
 ## Miscellaneous
 
