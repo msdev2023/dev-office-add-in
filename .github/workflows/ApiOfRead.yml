@@ -25,11 +25,12 @@ jobs:
         CLIENT_SECRET_1: ${{ secrets.CLIENT_SECRET }}
       run: |
         python ApiOfRead.py
-    - name: update_or_create Api.Read.txt
-      run: date +"%Y-%m-%d %H:%M:%S %z" > Api.Read.txt
+    - name: update_or_create report.api.read.txt
+      run: date +"%Y-%m-%d %H:%M:%S %z" > report.api.read.txt
     - name: commit report
       run: |
         git config --global user.name 'msdev2023'
         git config --global user.email 'msdev2023@outlook.com'
+        git add report.api.read.txt
         git commit -am "Report: Api.Read"
         git push
