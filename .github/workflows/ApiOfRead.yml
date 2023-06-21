@@ -31,7 +31,7 @@ jobs:
       run: |
         git config --global user.name 'msdev2023'
         git config --global user.email 'msdev2023@outlook.com'
-        git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git add report.api.read.txt
         git commit -am "Report: Api.Read"
         git push
