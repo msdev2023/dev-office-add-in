@@ -105,6 +105,19 @@ async def _worker_request(session, symbol, semaphore=None):
         return None
 
 
+async def worker_print(session, symbol, semaphore=None):
+    try:
+        data = await _worker_request(session, symbol, semaphore)
+        items = data["data"]["item"]
+        for item in items:
+            ts, close = item[0], item[5]
+            dt = datetime.fromtimestamp(ts // 1000, tz=CST)
+            dts = dt.strftime("%Y-%m-%d")
+            print(f"{symbol:<8}\t{close:>10.3f}\t{dts:>10}")
+    except:
+        return None
+
+
 async def worker(session, symbol, semaphore=None, month=None):
     try:
         data = await _worker_request(session, symbol, semaphore)
@@ -164,15 +177,24 @@ def print_close(codes, tasks):
         print(f"{name:<8}\t{close:>10.3f}\t{dt:>10}")
 
 
-async def runner(month=None):
+async def runner(month=None, symbol=None):
     codes = [
         {"symbol": "SH000300", "name": "沪深 300"},
         {"symbol": "SH000905", "name": "中证 500"},
         {"symbol": "HKHSI", "name": "恒生指数"},
+
+        {"symbol": "SH510310", "name": "沪深300ETF"},
+
+        {"symbol": "SH600519", "name": "贵州茅台"},
     ]
     tasks = []
     session = aiohttp.ClientSession()
     semaphore = asyncio.Semaphore(5)
+    if symbol:
+        await worker_print(session, symbol, semaphore)
+        await session.close()
+        return None
+
     for code in codes:
         task = asyncio.create_task(worker(session, code["symbol"], semaphore, month=month))
         tasks.append(task)
@@ -190,10 +212,11 @@ def main():
     parser = argparse.ArgumentParser()
     # parser.add_argument('cmd', choices=('7080', 'close'))
     parser.add_argument("-m", "--month", type=int, choices=tuple(range(1, 13)))
+    parser.add_argument("--symbol")
     args = parser.parse_args()
 
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(runner(month=args.month))
+    loop.run_until_complete(runner(month=args.month, symbol=args.symbol))
 
 
 if __name__ == "__main__":
